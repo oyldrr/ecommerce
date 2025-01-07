@@ -1,0 +1,32 @@
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.logo-text {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-style: normal;
+
+    text-transform: uppercase;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid #3333338b;
+    outline: none;
+
+    margin-right: 10px;
+}
+
+.icon {
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    transition: all ease-in-out .3s;
+}
+
+.icon:hover {
+    color: #ddd;
+}
