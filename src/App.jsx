@@ -1,10 +1,15 @@
 import './App.css'
+
+/* MUI Container */
 import PageContainer from './container/PageContainer'
+
+/* Components */
 import Header from './components/Header'
 import ProductList from './components/ProductList'
-
-import RouterConfig from './config/RouterConfig'
 import Loading from './components/Loading'
+
+/* Router */
+import RouterConfig from './config/RouterConfig'
 
 function App() {
 
@@ -13,7 +18,6 @@ function App() {
       <Loading />
       <Header />
       <RouterConfig />
-      <ProductList />
     </PageContainer>
   )
 }

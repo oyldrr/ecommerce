@@ -32,8 +32,9 @@
 
 .add-cart {
     color: #333;
-    background-color: #ddd;
+    background-color: #fff;
     border-radius: 15px;
+    border: 1px solid #333;
     padding: 1em;
     text-decoration: none;
 

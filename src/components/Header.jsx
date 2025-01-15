@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 // Custom CSS
 import '../css/Header.css'
@@ -10,6 +11,8 @@ import { IoMoonOutline } from "react-icons/io5";
 
 
 function Header() {
+
+    const navigator = useNavigate();
 
     const [theme, setTheme] = useState("false");
 
@@ -29,7 +32,7 @@ function Header() {
     return (
         <div className='flex-space-between'>
             <div className='flex-row'>
-                <img className='logo' src="./src/images/logo.png" alt="logo" />
+                <img className='logo' src="./src/images/logo.png" alt="logo" onClick={() => navigator('/')} />
                 <p className='logo-text'>ouz co.</p>
             </div>
             <div className="flex-row">
