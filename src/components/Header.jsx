@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setDrawer } from '../redux/slices/basketSlice';
+
 // Custom CSS
 import '../css/Header.css'
 
@@ -9,10 +13,16 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
 
+// MUI Components
+import Badge from '@mui/material/Badge';
 
 function Header() {
 
     const navigator = useNavigate();
+
+    const dispatch = useDispatch();
+
+    const { products } = useSelector((store) => store.basket);
 
     const [theme, setTheme] = useState("false");
 
@@ -43,7 +53,10 @@ function Header() {
                     {
                         theme ? <IoMoonOutline onClick={changeTheme} className='icon' /> : <CiLight className='icon' onClick={changeTheme} />
                     }
-                    <CiShoppingBasket className='icon' />
+
+                    <Badge onClick={() => dispatch(setDrawer())} badgeContent={products.length} color="error">
+                        <CiShoppingBasket className='icon' style={{ marginRight: "3px" }} />
+                    </Badge>
                 </div>
             </div>
         </div>

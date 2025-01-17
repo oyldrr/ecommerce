@@ -49,3 +49,17 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+.basket-container {
+    padding: 1rem;
+}
+
+.basket-products {
+    padding: 1rem;
+}
+
+.basket-product-title {
+    width: 200px;
+    padding: 0 1rem;
+    font-weight: 300;
+}
